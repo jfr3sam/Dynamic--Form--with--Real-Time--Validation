@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mx-auto container">
+      <!-- Progress Form -->
+      <form
+        id="progress-form"
+        class="p-4 progress-form"
+        action="https://httpbin.org/post"
+        lang="en"
+        novalidate
+      >
+        <h1>Register Now...</h1>
+        <!-- Step Navigation -->
+        <div
+          class="d-flex align-items-start mb-3 sm:mb-5 progress-form__tabs"
+          role="tablist"
+        >
+          <button
+            id="progress-form__tab-1"
+            class="flex-1 px-0 pt-2 progress-form__tabs-item"
+            type="button"
+            role="tab"
+            aria-controls="progress-form__panel-1"
+            aria-selected="true"
+          >
+            <span class="d-block step" aria-hidden="true"
+              >Step 1 <span class="sm:d-none">of 3</span></span
+            >
+            Details
+          </button>
+          <button
+            id="progress-form__tab-2"
+            class="flex-1 px-0 pt-2 progress-form__tabs-item"
+            type="button"
+            role="tab"
+            aria-controls="progress-form__panel-2"
+            aria-selected="false"
+            tabindex="-1"
+            aria-disabled="true"
+          >
+            <span class="d-block step" aria-hidden="true"
+              >Step 2 <span class="sm:d-none">of 3</span></span
+            >
+            Address
+          </button>
+          <button
+            id="progress-form__tab-3"
+            class="flex-1 px-0 pt-2 progress-form__tabs-item"
+            type="button"
+            role="tab"
+            aria-controls="progress-form__panel-3"
+            aria-selected="false"
+            tabindex="-1"
+            aria-disabled="true"
+          >
+            <span class="d-block step" aria-hidden="true"
+              >Step 3 <span class="sm:d-none">of 3</span></span
+            >
+            Personal
+          </button>
+        </div>
+        <!-- / End Step Navigation -->
+
+        <!--######################## Step 1 ########################-->
+        <section
+          id="progress-form__panel-1"
+          role="tabpanel"
+          aria-labelledby="progress-form__tab-1"
+          tabindex="0"
+        >
+          <div class="sm:d-grid sm:grid-col-3 sm:mt-3">
+            <!--================ First Name ================-->
+            <div class="mt-3 sm:mt-0 form__field">
+              <label for="first-name">
+                First name
+                <span data-required="true" aria-hidden="true"></span>
+              </label>
+              <input
+                id="first-name"
+                type="text"
+                name="first-name"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <!--================ Middle Name ================-->
+            <div class="mt-3 sm:mt-0 form__field">
+              <label for="middle-name">
+                Middle name <span data-required="true" aria-hidden="true"></span
+              ></label>
+              <input
+                id="middle-name"
+                type="text"
+                name="middle-name"
+                autocomplete="given-name"
+                required
+              />
+            </div>
+
+            <!--================ Middle Name ================-->
+            <div class="mt-3 sm:mt-0 form__field">
+              <label for="last-name">
+                Last name
+                <span data-required="true" aria-hidden="true"></span>
+              </label>
+              <input
+                id="last-name"
+                type="text"
+                name="last-name"
+                autocomplete="family-name"
+                required
+              />
+            </div>
+          </div>
+
+          <!--================ Email Address ================-->
+          <div class="mt-3 form__field">
+            <label for="email-address">
+              Email address
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <input
+              id="email-address"
+              type="email"
+              name="email-address"
+              autocomplete="email"
+              inputmode="email"
+              required
+            />
+          </div>
+
+          <!--================ Phone Number ================-->
+          <div class="mt-3 form__field">
+            <label for="phone-number">
+              Phone number <span data-required="true" aria-hidden="true"></span
+            ></label>
+            <input
+              id="phone-number"
+              type="tel"
+              name="phone-number"
+              autocomplete="tel"
+              inputmode="tel"
+              required
+            />
+          </div>
+
+          <!--================ Password ================-->
+          <div class="mt-3 form__field">
+            <label for="password">
+              Password <span data-required="true" aria-hidden="true"></span
+            ></label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              inputmode="password"
+              required
+            />
+          </div>
+
+          <!--================ Confirm Password ================-->
+          <div class="mt-3 form__field">
+            <label for="re_password">
+              Confirm Password
+              <span data-required="true" aria-hidden="true"></span
+            ></label>
+            <input
+              id="re_password"
+              type="password"
+              name="re_password"
+              inputmode="password"
+              required
+            />
+          </div>
+
+          <div
+            class="d-flex align-items-center justify-center sm:justify-end mt-4 sm:mt-5"
+          >
+            <button type="button" data-action="next">Continue</button>
+          </div>
+        </section>
+        <!-- / End Step 1 -->
+
+        <!--######################## Step 2 ########################-->
+        <section
+          id="progress-form__panel-2"
+          role="tabpanel"
+          aria-labelledby="progress-form__tab-2"
+          tabindex="0"
+          hidden
+        >
+          <div class="mt-3 form__field">
+            <label for="address">
+              Address
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <input
+              id="address"
+              type="text"
+              name="address"
+              autocomplete="shipping address-line1"
+              required
+            />
+          </div>
+
+          <div class="mt-3 form__field">
+            <label for="address-2"> Apartment or suite (optional) </label>
+            <input
+              id="address-2"
+              type="text"
+              name="address-2"
+              autocomplete="shipping address-line2"
+            />
+          </div>
+
+          <div class="sm:d-grid sm:grid-col-2 sm:mt-3">
+            <div class="mt-3 sm:mt-0 form__field">
+              <label for="address-city">
+                City
+                <span data-required="true" aria-hidden="true"></span>
+              </label>
+              <input
+                id="address-city"
+                type="text"
+                name="address-city"
+                autocomplete="shipping address-level2"
+                required
+              />
+            </div>
+
+            <div class="mt-3 sm:mt-0 form__field">
+              <label for="region-state">
+                Region
+                <span data-required="true" aria-hidden="true"></span>
+              </label>
+              <select
+                id="region-state"
+                name="region-state"
+                autocomplete="shipping address-level1"
+                required
+              >
+                <option value="" disabled selected>Please select</option>
+                <option value="riyadh">Riyadh</option>
+                <option value="mekkah">Makkah</option>
+                <option value="medina">Medina</option>
+                <option value="qassim">Qassim</option>
+                <option value="eastern_province">Eastern Province</option>
+                <option value="asir">Asir</option>
+                <option value="tabuk">Tabuk</option>
+                <option value="hail">Hail</option>
+                <option value="northern_borders">Northern Borders</option>
+                <option value="jizan">Jizan</option>
+                <option value="najran">Najran</option>
+                <option value="bahah">Bahah</option>
+                <option value="jawf">Jawf</option>
+              </select>
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column-reverse sm:flex-row align-items-center justify-center sm:justify-end mt-4 sm:mt-5"
+          >
+            <button
+              type="button"
+              class="mt-1 sm:mt-0 button--simple"
+              data-action="prev"
+            >
+              Back
+            </button>
+            <button type="button" data-action="next">Continue</button>
+          </div>
+        </section>
+        <!-- / End Step 2 -->
+
+        <!--######################## Step 3 ########################-->
+        <section
+          id="progress-form__panel-3"
+          role="tabpanel"
+          aria-labelledby="progress-form__tab-3"
+          tabindex="0"
+          hidden
+        >
+          <!--================ National ID ================-->
+          <div class="mt-3 form__field">
+            <label for="national_id">
+              National ID/Iqama
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <input
+              id="national_id"
+              type="number"
+              name="national_id"
+              inputmode="number"
+              required
+            />
+          </div>
+
+          <!--================ Nationality ================-->
+          <div class="mt-3 form__field">
+            <label for="nationality" class="label"
+              >Nationality<span class="require">*</span></label
+            >
+            <select name="nationality" id="nationality">
+              <option value="afghanistan">Afghanistan</option>
+              <option value="albania">Albania</option>
+              <option value="algeria">Algeria</option>
+              <option value="andorra">Andorra</option>
+              <option value="angola">Angola</option>
+              <option value="antigua_and_barbuda">Antigua and Barbuda</option>
+              <option value="argentina">Argentina</option>
+              <option value="armenia">Armenia</option>
+              <option value="australia">Australia</option>
+              <option value="austria">Austria</option>
+              <option value="azerbaijan">Azerbaijan</option>
+              <option value="bahamas">Bahamas</option>
+              <option value="bahrain">Bahrain</option>
+              <option value="bangladesh">Bangladesh</option>
+              <option value="barbados">Barbados</option>
+              <option value="belarus">Belarus</option>
+              <option value="belgium">Belgium</option>
+              <option value="belize">Belize</option>
+              <option value="benin">Benin</option>
+              <option value="bhutan">Bhutan</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="bosnia_and_herzegovina">
+                Bosnia and Herzegovina
+              </option>
+              <option value="botswana">Botswana</option>
+              <option value="brazil">Brazil</option>
+              <option value="brunei">Brunei</option>
+              <option value="bulgaria">Bulgaria</option>
+              <option value="burkina_faso">Burkina Faso</option>
+              <option value="burundi">Burundi</option>
+              <option value="cabo_verde">Cabo Verde</option>
+              <option value="cambodia">Cambodia</option>
+              <option value="cameroon">Cameroon</option>
+              <option value="canada">Canada</option>
+              <option value="central_african_republic">
+                Central African Republic
+              </option>
+              <option value="chad">Chad</option>
+              <option value="chile">Chile</option>
+              <option value="china">China</option>
+              <option value="colombia">Colombia</option>
+              <option value="comoros">Comoros</option>
+              <option value="congo_democratic_republic">
+                Congo, Democratic Republic of the
+              </option>
+              <option value="congo_republic">Congo, Republic of the</option>
+              <option value="costa_rica">Costa Rica</option>
+              <option value="cote_d_ivoire">Côte d'Ivoire</option>
+              <option value="croatia">Croatia</option>
+              <option value="cuba">Cuba</option>
+              <option value="cyprus">Cyprus</option>
+              <option value="czech_republic">Czech Republic</option>
+              <option value="denmark">Denmark</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="dominica">Dominica</option>
+              <option value="dominican_republic">Dominican Republic</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="egypt">Egypt</option>
+              <option value="el_salvador">El Salvador</option>
+              <option value="equatorial_guinea">Equatorial Guinea</option>
+              <option value="eritrea">Eritrea</option>
+              <option value="estonia">Estonia</option>
+              <option value="eswatini">Eswatini</option>
+              <option value="ethiopia">Ethiopia</option>
+              <option value="fiji">Fiji</option>
+              <option value="finland">Finland</option>
+              <option value="france">France</option>
+              <option value="gabon">Gabon</option>
+              <option value="gambia">Gambia</option>
+              <option value="georgia">Georgia</option>
+              <option value="germany">Germany</option>
+              <option value="ghana">Ghana</option>
+              <option value="greece">Greece</option>
+              <option value="grenada">Grenada</option>
+              <option value="guatemala">Guatemala</option>
+              <option value="guinea">Guinea</option>
+              <option value="guinea_bissau">Guinea-Bissau</option>
+              <option value="guyana">Guyana</option>
+              <option value="haiti">Haiti</option>
+              <option value="honduras">Honduras</option>
+              <option value="hungary">Hungary</option>
+              <option value="iceland">Iceland</option>
+              <option value="india">India</option>
+              <option value="indonesia">Indonesia</option>
+              <option value="iran">Iran</option>
+              <option value="iraq">Iraq</option>
+              <option value="ireland">Ireland</option>
+              <option value="italy">Italy</option>
+              <option value="jamaica">Jamaica</option>
+              <option value="japan">Japan</option>
+              <option value="jordan">Jordan</option>
+              <option value="kazakhstan">Kazakhstan</option>
+              <option value="kenya">Kenya</option>
+              <option value="kiribati">Kiribati</option>
+              <option value="korea_north">Korea, North</option>
+              <option value="korea_south">Korea, South</option>
+              <option value="kosovo">Kosovo</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="kyrgyzstan">Kyrgyzstan</option>
+              <option value="laos">Laos</option>
+              <option value="latvia">Latvia</option>
+              <option value="lebanon">Lebanon</option>
+              <option value="lesotho">Lesotho</option>
+              <option value="liberia">Liberia</option>
+              <option value="libya">Libya</option>
+              <option value="liechtenstein">Liechtenstein</option>
+              <option value="lithuania">Lithuania</option>
+              <option value="luxembourg">Luxembourg</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="malawi">Malawi</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="maldives">Maldives</option>
+              <option value="mali">Mali</option>
+              <option value="malta">Malta</option>
+              <option value="marshall_islands">Marshall Islands</option>
+              <option value="mauritania">Mauritania</option>
+              <option value="mauritius">Mauritius</option>
+              <option value="mexico">Mexico</option>
+              <option value="micronesia">Micronesia</option>
+              <option value="moldova">Moldova</option>
+              <option value="monaco">Monaco</option>
+              <option value="mongolia">Mongolia</option>
+              <option value="montenegro">Montenegro</option>
+              <option value="morocco">Morocco</option>
+              <option value="mozambique">Mozambique</option>
+              <option value="myanmar">Myanmar</option>
+              <option value="namibia">Namibia</option>
+              <option value="nauru">Nauru</option>
+              <option value="nepal">Nepal</option>
+              <option value="netherlands">Netherlands</option>
+              <option value="new_zealand">New Zealand</option>
+              <option value="nicaragua">Nicaragua</option>
+              <option value="niger">Niger</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="north_macedonia">North Macedonia</option>
+              <option value="norway">Norway</option>
+              <option value="oman">Oman</option>
+              <option value="pakistan">Pakistan</option>
+              <option value="palau">Palau</option>
+              <option value="palestine">Palestine</option>
+              <option value="panama">Panama</option>
+              <option value="papua_new_guinea">Papua New Guinea</option>
+              <option value="paraguay">Paraguay</option>
+              <option value="peru">Peru</option>
+              <option value="philippines">Philippines</option>
+              <option value="poland">Poland</option>
+              <option value="portugal">Portugal</option>
+              <option value="qatar">Qatar</option>
+              <option value="romania">Romania</option>
+              <option value="russia">Russia</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="saint_kitts_and_nevis">
+                Saint Kitts and Nevis
+              </option>
+              <option value="saint_lucia">Saint Lucia</option>
+              <option value="saint_vincent_and_the_grenadines">
+                Saint Vincent and the Grenadines
+              </option>
+              <option value="samoa">Samoa</option>
+              <option value="san_marino">San Marino</option>
+              <option value="sao_tome_and_principe">
+                São Tomé and Príncipe
+              </option>
+              <option value="saudi_arabia" selected>Saudi Arabia</option>
+              <option value="senegal">Senegal</option>
+              <option value="serbia">Serbia</option>
+              <option value="seychelles">Seychelles</option>
+              <option value="sierra_leone">Sierra Leone</option>
+              <option value="singapore">Singapore</option>
+              <option value="slovakia">Slovakia</option>
+              <option value="slovenia">Slovenia</option>
+              <option value="solomon_islands">Solomon Islands</option>
+              <option value="somalia">Somalia</option>
+              <option value="south_africa">South Africa</option>
+              <option value="south_korea">South Korea</option>
+              <option value="south_sudan">South Sudan</option>
+              <option value="spain">Spain</option>
+              <option value="sri_lanka">Sri Lanka</option>
+              <option value="sudan">Sudan</option>
+              <option value="suriname">Suriname</option>
+              <option value="swaziland">Swaziland</option>
+              <option value="sweden">Sweden</option>
+              <option value="switzerland">Switzerland</option>
+              <option value="syria">Syria</option>
+              <option value="taiwan">Taiwan</option>
+              <option value="tajikistan">Tajikistan</option>
+              <option value="tanzania">Tanzania</option>
+              <option value="thailand">Thailand</option>
+              <option value="togo">Togo</option>
+              <option value="tonga">Tonga</option>
+              <option value="trinidad_and_tobago">Trinidad and Tobago</option>
+              <option value="tunisia">Tunisia</option>
+              <option value="turkey">Turkey</option>
+              <option value="turkmenistan">Turkmenistan</option>
+              <option value="tuvalu">Tuvalu</option>
+              <option value="uganda">Uganda</option>
+              <option value="ukraine">Ukraine</option>
+              <option value="united_arab_emirates">United Arab Emirates</option>
+              <option value="united_kingdom">United Kingdom</option>
+              <option value="united_states">United States</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="uzbekistan">Uzbekistan</option>
+              <option value="vanuatu">Vanuatu</option>
+              <option value="vatican_city">Vatican City</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="vietnam">Vietnam</option>
+              <option value="yemen">Yemen</option>
+              <option value="zambia">Zambia</option>
+              <option value="zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+
+          <!--================ Transportation ================-->
+          <div class="mt-3 form__field">
+            <label for="gender">
+              Gender
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <!--================ Transportation ================-->
+          <div class="mt-3 form__field">
+            <label for="vehicle">
+              Do you have transportation?
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <select id="vehicle" name="vehicle" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="True">Yes</option>
+              <option value="False">No</option>
+            </select>
+          </div>
+
+          <!--================ Currently Working ================-->
+          <div class="mt-3 form__field">
+            <label for="work">
+              Are you currently working?
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <select id="work" name="work" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="True">Yes</option>
+              <option value="False">No</option>
+            </select>
+          </div>
+
+          <!--================ Experience ================-->
+          <div class="mt-3 form__field">
+            <label for="work">
+              Years of experience?
+              <span data-required="true" aria-hidden="true"></span>
+            </label>
+            <select id="experience" name="experience" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="1">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="1">3</option>
+              <option value="2">4</option>
+              <option value="1">5</option>
+              <option value="1">6</option>
+              <option value="2">7</option>
+              <option value="1">8</option>
+              <option value="2">9</option>
+              <option value="1">10</option>
+              <option value="1">11</option>
+              <option value="2">12</option>
+              <option value="1">13</option>
+              <option value="2">14</option>
+              <option value="1">15</option>
+              <option value="1">16</option>
+              <option value="2">17</option>
+              <option value="1">18</option>
+              <option value="2">19</option>
+              <option value="1">20</option>
+            </select>
+          </div>
+
+          <div
+            class="d-flex flex-column-reverse sm:flex-row align-items-center justify-center sm:justify-end mt-4 sm:mt-5"
+          >
+            <button
+              type="button"
+              class="mt-1 sm:mt-0 button--simple"
+              data-action="prev"
+            >
+              Back
+            </button>
+            <button type="submit">Submit</button>
+          </div>
+        </section>
+        <!-- / End Step 3 -->
+      </form>
+      <!-- / End Progress Form -->
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  </body>
+</html>
