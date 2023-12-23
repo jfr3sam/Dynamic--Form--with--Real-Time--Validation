@@ -30,9 +30,6 @@ Navigate through the form sections and fill out the information. The real-time v
 Contributions to this project are welcome. Please ensure that you update tests as appropriate and adhere to the existing coding style.
 
 ## License
-[Insert License Here] - Typically, projects will include a license here to dictate how it can be used or distributed.
-
-## License
 
 MIT License
 
