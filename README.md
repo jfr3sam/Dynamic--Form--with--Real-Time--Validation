@@ -8,6 +8,7 @@ This project, "Interactive Input Interface," is a sophisticated web application 
 - **HTML**: Structures the web content and form elements.
 - **CSS**: Provides styling to make the form visually appealing and user-friendly.
 - **JavaScript**: Adds interactive features and real-time validation to the form.
+- **Regular Expressions (RegEx)**: Utilized within JavaScript for accurate and efficient pattern matching in form validation. They are used to define constraints for different types of data (e.g., email, phone number) and ensure that user inputs adhere to the expected format.
 
 ## Files
 - **index.html**: The main HTML file containing the structure and content of the form and possibly other webpage elements.
